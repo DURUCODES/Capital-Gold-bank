@@ -102,7 +102,7 @@ const desktopnav = ({ openNav, isOpen }) => {
             onClick={toggleDropdown}
           />
           {isDrop && (
-            <div className="absolute bg-white shadow-xl top-10 rounded shadow">
+            <div className="absolute bg-white shadow-xl top-10 rounded ">
               <div tabIndex={0} role="button" className="btn m-1"></div>
               <ul className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 space-y-2 p-2 shadow">
                 <li onClick={cancleToggle}>
