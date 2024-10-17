@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+.clip-shape {
+  clip-path: ellipse(10% 10% at 20% 0%);
+  overflow: hidden;
+}
+
+@keyframes continuous-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.continuous-slide {
+  animation: continuous-slide 5s linear infinite;
+  display: flex;
+}
+
+@keyframes slow-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust this value for bounce height */
+  }
+}
+
+.animate-slow-bounce {
+  animation: slow-bounce 1s ease-in-out infinite; /* Adjust duration for speed */
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+@keyframes move-left-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px); /* Adjust for the left position */
+  }
+  100% {
+    transform: translateX(10px); /* Adjust for the right position */
+  }
+}
+
+.animate-move-left-right {
+  animation: move-left-right 3s infinite alternate;
+}
+
+.custom-background {
+  position: relative;
+  background-image: url("path_to_your_background_image"); /* Replace with your image path */
+  background-size: cover;
+  background-position: bottom left;
+  width: 200px;
+  height: 200px; /* Adjust height as needed */
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px); /* Adjust the height of the bounce */
+  }
+  60% {
+    transform: translateY(-10px); /* Adjust for a softer bounce */
+  }
+}
+
+.bouncepic {
+  animation: bounce 3s infinite; /* 3 seconds duration, infinite repetition */
+}
+
+.wideyy {
+  letter-spacing: 2px;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-80px, 0);
+  } /* Move left */
+  50% {
+    transform: translate(10px, 0);
+  } /* Move right */
+  75% {
+    transform: translate(0, -70px);
+  } /* Move up */
+  100% {
+    transform: translate(0, 0px);
+  } /* Move down */
+}
+
+.animate-move {
+  animation: move 10s infinite; /* Total duration is 8s (2s per direction) */
+}
+
+@keyframes move-up-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(
+      -10px
+    ); /* Adjust the value for how high you want it to move */
+  }
+}
+
+.animate-up-down {
+  animation: move-up-down 4s infinite; /* Duration of 2 seconds, looping indefinitely */
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+.block {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/*  LAODING PAGE  BELOW */
+@keyframes bounce {
+  0%,
+  30% {
+    transform: rotate(0deg) scale(1);
+  }
+  10% {
+    transform: rotate(360deg) scale(0.1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 10s ease-in-out;
+  width: 100px;
+}
