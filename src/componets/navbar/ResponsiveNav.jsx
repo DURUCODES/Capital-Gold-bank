@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DesktopNav from "./desktopnav";
+import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 const ResponsiveNav = () => {
   const [isOpen, setIsOpen] = useState(false);
