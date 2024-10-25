@@ -156,3 +156,46 @@ body {
   animation: bounce 10s ease-in-out;
   width: 100px;
 }
+
+.clip-left {
+  clip-path: polygon(40% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);
+}
+
+.clip-image {
+  clip-path: polygon(40% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);
+}
+
+.clip-div {
+  clip-path: polygon(40% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);
+}
+
+.clip-div2 {
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);
+}
+
+/* DOT FOR CAROUSEL  BELOW */
+
+.slick-dots {
+  bottom: -30px; /* Adjust position if needed */
+}
+
+.slick-dots li {
+  width: 20px; /* Adjust width of dots */
+  height: 10px; /* Adjust height of dots */
+}
+
+.slick-dots li.slick-active button {
+  background-color: #db2777; /* Active dot color */
+}
+
+.slick-dots li button {
+  background-color: gray; /* Inactive dot color */
+  border: none; /* Remove border */
+  width: 16px; /* Adjust button size */
+  height: 16px; /* Adjust button size */
+  border-radius: 50%; /* Make dots circular */
+  box-shadow: none; /* Remove any shadow */
+  outline: none; /* Remove any outline */
+}
+
+/*  dDIGITAL */

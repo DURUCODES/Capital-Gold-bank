@@ -70,42 +70,42 @@ const Rate = () => {
   // List of countries and their currency codes
 
   return (
-    <div className="md:p-10 p-4 block text-center">
-      <div className="my-10">
+    <div className="md:p-10 p-4 block  bg-white ">
+      <div className="mt-10 text-center ">
         <p className="text-[#db2777] tracking-2px mb-4">LIVE EXCHANGE RATES</p>
         <h1 className="font-bold md:text-[35px] text-xl md:w-[600px] mx-auto leading-relaxed">
           {" "}
           Exchange Money Across The World In Real Time With Lowest Fees
         </h1>
       </div>
-      <div className="px-2  shadow-2xl">
-        <div className="bg-[#db2777] flex items-center p-4 text-white ">
-          {/*SWITHC TOGGLE  */}
-          <label class="relative inline-block h-8 w-14 mr-2 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-gray-900">
-            <input class="peer sr-only" id="AcceptConditions" type="checkbox" />
-            <span class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"></span>
-          </label>
-          <h1 className="text-[30px] text-center">Currency Rates</h1>
+      <div className="px-2  shadow">
+        <div className="bg-black flex flex-col   text-white rounded p-2  border-b-2">
+          <h3>Currency Rate</h3>
         </div>
+        <div>
+          <ul></ul>
+        </div>
+
         <ul>
           {countryList.map(
             ({ country, code, image, symbol }) =>
               rates[code] && (
                 <li
                   key={code}
-                  className=" grid grid-cols-4 md:flex md:flex-row md:justify-between border-b-2 py-4 items-center px-2  "
+                  className="  flex  justify-between items-center md:flex md:flex-row md:justify-between border-b-2 py-4  px-2  "
                 >
-                  <div className="rounded-full">
+                  <div className=" flex items-center">
                     <img
                       className="rounded-full"
                       src={image}
                       alt={`${country} flag`}
                       style={{ width: "30px", marginRight: "10px" }}
                     />
+                    <div>
+                      <p className="text-[12px] md:text-[20px]"> {country}:</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-[12px] md:text-[20px]"> {country}:</p>
-                  </div>
+
                   <div className="flex">
                     <span className="text-[12px] md:text-[20px] font-semibold">
                       {" "}

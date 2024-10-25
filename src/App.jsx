@@ -18,6 +18,9 @@ import ContatcUs from "./componets/Support/ContatcUs";
 import LoginPage from "./componets/USER/LoginPage";
 import Register from "./componets/USER/Register";
 import Loading from "./componets/Loading/Loading";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Scroll from "./componets/scrol/Scroll";
 
 const AppLayout = () => {
   const location = useLocation();
@@ -68,6 +71,7 @@ function App() {
   return (
     <Router>
       <AppLayout />
+      <Scroll />
     </Router>
   );
 }

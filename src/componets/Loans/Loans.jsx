@@ -52,14 +52,14 @@ const Loans = () => {
           Capital Gold Trust bank
         </h1>
 
-        <h2 className="font-bold text-[20px]  mt-2">
+        <h2 className="font-bold md:text-[20px]  text-[16px] mt-2">
           We've got you covered whether you're looking to pre-qualify for
           vehicle financing, refinancing your current auto loan, or have been
           pre-approved for an exclusive financing offer. Let's get started on
           your financial journey.
         </h2>
       </div>
-      <div className="px-5 py-10">
+      <div className="px-4 space-x-4 py-10">
         <div className="flex items-center my-4 ">
           <img src={cardheadline} />
           <h3 className="text-2xl font-semibold ml-2">Loan Details</h3>
@@ -70,7 +70,7 @@ const Loans = () => {
               src={card2}
               className="w-[50px] h-[50px] md:w-[80px] md:h-[80px]"
             />
-            <p className="text-xs mt-4">CAR LOAN</p>
+            <p className="text-[14px] mt-4">CAR LOAN</p>
             <hr className="mt-5 border-1  w-full border-black" />
           </div>
 
@@ -79,7 +79,7 @@ const Loans = () => {
               src={card1}
               className="w-[50px] h-[50px] md:w-[80px] md:h-[80px]"
             />
-            <p className="text-xs mt-4">HOME LOAN</p>
+            <p className="text-[14px] mt-4">HOME LOAN</p>
             <hr className="mt-5 border-1  w-full border-black" />
           </div>
           <div className="flex  flex-col items-center my-4 ">
@@ -87,7 +87,7 @@ const Loans = () => {
               src={card3}
               className="w-[50px] h-[50px] md:w-[80px] md:h-[80px]"
             />
-            <p className="text-xs mt-4">MED. LOAN</p>
+            <p className="text-[14px] mt-4">MED. LOAN</p>
             <hr className="mt-5 border-1  w-full border-black" />
           </div>
           <div className="flex  flex-col items-center my-4 ">
@@ -95,7 +95,7 @@ const Loans = () => {
               src={card4}
               className="w-[50px] h-[50px] md:w-[80px] md:h-[80px]"
             />
-            <p className="text-xs mt-4">BUS. LAON</p>
+            <p className="text-[14px] mt-4">BUS. LAON</p>
             <hr className="mt-5 border-1  w-full border-black" />
           </div>
         </div>

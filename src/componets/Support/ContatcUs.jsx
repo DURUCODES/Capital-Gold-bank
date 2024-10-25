@@ -35,7 +35,7 @@ const ContatcUs = () => {
       </div>
       {/* ABOUT THE BANK CONTACT, NUMBER , AND LOCATION BELOW  */}
       <div className="grid grid-cols-1 md:grid-cols-3 p-5 items-center">
-        <div className="relative shadow-2xl p-5 bg-[#FAFAFA] flex mr-4 items-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl my-4 overflow-hidden group md:w-[400px] h-[200px]">
+        <div className="relative shadow p-5 w-full bg-[#FAFAFA] flex  items-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl my-4 overflow-hidden group md:w-[400px] h-[200px]">
           <span className="relative bg-white shadow p-5 rounded-full overflow-hidden transition-all duration-500 mr-2 flex items-center justify-center">
             <span className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
             <CiLocationOn className="text-3xl text-[#db2777] transition-colors duration-500 relative z-10 group-hover:text-white" />
@@ -50,7 +50,7 @@ const ContatcUs = () => {
           </div>
         </div>
 
-        <div className="relative shadow-2xl p-5 bg-[#FAFAFA] flex mr-4 items-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl my-4 overflow-hidden group md:w-[400px] h-[200px]">
+        <div className="relative shadow p-5 bg-[#FAFAFA] flex  items-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl my-4 overflow-hidden group md:w-[400px] h-[200px]">
           <span className="relative bg-white shadow p-5 rounded-full overflow-hidden transition-all duration-500 mr-2 flex items-center justify-center">
             <span className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
             <TfiEmail className="text-3xl text-[#db2777] transition-colors duration-500 relative z-10 group-hover:text-white" />
@@ -63,7 +63,7 @@ const ContatcUs = () => {
           </div>
         </div>
 
-        <div className="relative shadow-2xl p-5 bg-[#FAFAFA] flex mr-4 items-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl my-4 overflow-hidden group md:w-[400px] h-[200px]">
+        <div className="relative shadow p-5 bg-[#FAFAFA] flex mr-4 items-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl my-4 overflow-hidden group md:w-[400px] h-[200px]">
           <span className="relative bg-white shadow p-5 rounded-full overflow-hidden transition-all duration-500 mr-2 flex items-center justify-center">
             <span className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
             <LuPhone className="text-3xl text-[#db2777] transition-colors duration-500 relative z-10 group-hover:text-white" />
@@ -78,7 +78,7 @@ const ContatcUs = () => {
       </div>
 
       {/* FORM FILED BELOW */}
-      <div className="p-10 flex  flex-col-reverse md:flex-row justify-between items-center ">
+      <div className="px-4 flex  mb-5 flex-col-reverse md:flex-row justify-between items-center ">
         <div>
           <form>
             <div className="flex  flex-col gap-4">

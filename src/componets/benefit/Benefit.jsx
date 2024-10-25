@@ -10,11 +10,11 @@ import { TbHandClick } from "react-icons/tb";
 import { countryList } from "../currencyrate/Rate";
 const Benefit = () => {
   return (
-    <div className="my-10 bg-gray-100 p-10">
+    <div className="my-10 bg-gray-100 py-10 px-4">
       <h3 className="text-center text-[#db2777] tracking-2px ">
         YOUR BENEFITS
       </h3>
-      <h1 className="font-bold text-center text-[35px]">
+      <h1 className="font-bold text-center md:text-[35px]">
         Your one-stop digital banking platform
       </h1>
       <div>
@@ -86,11 +86,11 @@ const Benefit = () => {
           </div>
         </div>
 
-        <div className="my-40">
+        <div className="mt-10">
           <h3 className="text-center text-[#db2777] tracking-2px ">
             CURRENCY PROFILE
           </h3>
-          <h1 className="font-bold text-center text-[35px]">
+          <h1 className="font-bold text-center md:text-[35px]">
             Get These Local Account Details Just Like Pay A Local
           </h1>
           <div>

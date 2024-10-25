@@ -33,10 +33,11 @@ import { MdDone } from "react-icons/md";
 import clapimg from "../public/image/clap.avif";
 import roundpop from "../public/image/roundpop.avif";
 import Counter from "../counter/Counter";
+import Carousel from "../carousel/Carousel";
 
 const About = () => {
   return (
-    <div className="">
+    <div className=" overflow-hidden">
       <div
         style={{
           backgroundImage: `linear-gradient(to right, rgba(219, 39, 119, 0.8), rgba(0, 0, 0, 0.8)), url(${business})`,
@@ -75,32 +76,29 @@ const About = () => {
       </div>
 
       {/* about details below */}
-      <div className="flex  justify-between  md:flex-row flex-col items-center  px-5 md:px-10">
-        <img
-          src={popfly}
-          className="absolute w-16 md:left-[25%] left-[70%] md:top-[100%] top-[93%] animate-move-left-right"
-        />
-
-        <div className="grid grid-cols-2 gap-2">
+      <div className="flex  w-full md:flex-row flex-col items-center px-4 md:px-10 ">
+        <div className="grid grid-cols-2  gap-4">
           {/* Row 1 */}
           <div>
             <img
               src={about1}
-              className="md:w-[300px] md:h-[350px] object-cover rounded"
+              className="md:w-[500px] md:h-[400px] w-[250px] h-[300px] object-cover rounded"
             />
           </div>
           <div>
             <img
+              src={popfly}
+              className="absolute w-16 md:left-[25%] left-[70%]  animate-move-left-right"
+            />
+            <img
               src={about2}
-              className="md:w-[300px] md:h-[300px] my-10 object-cover rounded"
+              className="md:w-[500px] md:h-[350px] mt-[48px] h-[250px]  object-cover rounded"
             />
           </div>
-
-          {/* Row 2 */}
-          <div className="relative">
+          <div>
             <img
               src={about3}
-              className="md:w-[300px] md:h-[350px] object-cover  rounded"
+              className="md:w-[500px] md:h-[350px] h-[200px] object-cover rounded relative z-10"
             />
             <img
               src={lightimg}
@@ -110,12 +108,12 @@ const About = () => {
           <div>
             <img
               src={about4}
-              className="md:w-[300px] md:h-[350px] md:my-10 object-cover rounded"
+              className="md:w-[500px] md:h-[400px] h-[250px]  object-cover rounded"
             />
           </div>
         </div>
 
-        <div className="md:ml-16">
+        <div className="md:ml-4">
           {/* right sidelightimg */}
           <div className="my-5">
             {" "}
@@ -131,13 +129,13 @@ const About = () => {
           </div>
           <div>
             <div className="flex my-8">
-              <div className="relative bg-blue-100 w-24 h-14 flex mr-4 items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
+              <div className="relative bg-blue-100 md:w-24 md:h-14 w-[150px]  h-[50px] flex  items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                 <TbHandClick className="text-3xl text-[#db2777] group-hover:text-white transition-colors duration-500 relative z-10" />
               </div>
 
-              <div>
-                <h2 className="text-[20px] font-bold">
+              <div className="ml-4">
+                <h2 className="md:text-[20px] font-bold">
                   Powerful Mobile & Online App
                 </h2>
                 <p className="font-light text-gray-600">
@@ -148,13 +146,13 @@ const About = () => {
             </div>
 
             <div className="flex my-8">
-              <div className="relative bg-blue-100 w-24 h-14 flex mr-4 items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
+              <div className="relative bg-blue-100 md:w-24 md:h-14 w-[150px]  h-[50px] flex  items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                 <CiAlarmOn className="text-3xl text-[#db2777] group-hover:text-white transition-colors duration-500 relative z-10" />
               </div>
 
-              <div>
-                <h2 className="text-[20px] font-bold">
+              <div className="ml-4">
+                <h2 className="md:text-[20px] font-bold">
                   Brings More Transperency & Speed
                 </h2>
                 <p className="font-light text-gray-600">
@@ -165,13 +163,13 @@ const About = () => {
             </div>
 
             <div className="flex my-8">
-              <div className="relative bg-blue-100 w-24 h-14 flex mr-4 items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
+              <div className="relative bg-blue-100 w-[200px] md:w-[140px] md:h-14  h-[50px] flex  items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                 <SiBetterstack className="text-3xl text-[#db2777] group-hover:text-white transition-colors duration-500 relative z-10" />
               </div>
 
-              <div>
-                <h2 className="text-[20px] font-bold">
+              <div className="ml-4">
+                <h2 className="md:text-[20px] font-bold">
                   Special For Multiple User Capabilities
                 </h2>
                 <p className="font-light text-gray-600">
@@ -196,79 +194,9 @@ const About = () => {
       {/* ////////// */}
 
       {/* popular current below */}
-      <div className="text-center my-8">
-        <h2 className="text-[#db2777] wideyy">POPULAR CURRENCY TOOLS</h2>
-        <h1 className="text-black font-semibold text-[30px] ">
-          Set Up & Exchange Money From Your Cards In A Minute
-        </h1>
-      </div>
+      <div className="text-center my-8"></div>
       {/* slider card below */}
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-4 px-5 my-4">
-        <div className="shadow-xl p-8 rounded-xl flex flex-col bg-white ">
-          <div className="flex items-center mb-4">
-            <span className="">
-              {" "}
-              <FaHandHoldingUsd className="text-[45px] text-[#db2777] mr-4" />
-            </span>
-            <p className="text-2xl font-semibold">Money Transfer</p>
-          </div>
-          <div>
-            <p>
-              with out digital , you may send money to relatives and friends all
-              over the world
-            </p>
-          </div>
-          <div className="flex items-center my-2 text-[#db2777] cursor-pointer">
-            <a>SEND MONEY </a>{" "}
-            <span className="ml-2">
-              <FaAngleRight />
-            </span>
-          </div>
-        </div>
-        <div className="shadow-xl p-8 rounded-xl flex flex-col bg-white ">
-          <div className="flex items-center mb-4">
-            <span className="">
-              {" "}
-              <FaHandHoldingUsd className="text-[45px] text-[#db2777] mr-4" />
-            </span>
-            <p className="text-2xl font-semibold">Money Transfer</p>
-          </div>
-          <div>
-            <p>
-              with out digital , you may send money to relatives and friends all
-              over the world
-            </p>
-          </div>
-          <div className="flex items-center my-2 text-[#db2777] cursor-pointer">
-            <a>SEND MONEY </a>{" "}
-            <span className="ml-2">
-              <FaAngleRight />
-            </span>
-          </div>
-        </div>
-
-        <div className="shadow-xl p-8 rounded-xl flex flex-col bg-white ">
-          <div className="flex items-center mb-4">
-            <span className="">
-              {" "}
-              <FaHandHoldingUsd className="text-[45px] text-[#db2777] mr-4" />
-            </span>
-            <p className="text-2xl font-semibold">Money Transfer</p>
-          </div>
-          <div>
-            <p>
-              with out digital , you may send money to relatives and friends all
-              over the world
-            </p>
-          </div>
-          <div className="flex items-center my-2 text-[#db2777] cursor-pointer">
-            <a>SEND MONEY </a>{" "}
-            <span className="ml-2">
-              <FaAngleRight />
-            </span>
-          </div>
-        </div>
-      </div>
+      <Carousel />
 
       {/*  we are innovative and digital below */}
       <div className="px-5 md:p-10  flex flex-col md:flex-row justify-between items-center">
@@ -332,12 +260,12 @@ const About = () => {
       </div>
 
       {/*  fun fact below  and counting numbers  */}
-      <div className="my-10">
+      <div className="my-4">
         <div>
           <h3 className="tracking-2px text-[#db2777] text-center">
             SOME FUN FACTS
           </h3>
-          <h1 className="text-[30px] font-bold text-center">
+          <h1 className="md:text-[30px] font-bold text-center">
             We Always Try To Understand Customer's Expectation
           </h1>
         </div>
@@ -347,7 +275,7 @@ const About = () => {
       </div>
 
       {/*  draft display  */}
-      <div className="flex  flex-col justify-center  md:flex-row  md:p-20 md:justify-between my-10 px-5  items-center ">
+      <div className="flex  flex-col justify-center  md:flex-row  md:p-5 md:justify-between my-5 px-5  items-center ">
         <div className="flex justify-center my-5">
           <img src={phoneimage} className="w-[80%] h-auto" />
         </div>
@@ -384,3 +312,51 @@ const About = () => {
 };
 
 export default About;
+/* 
+
+
+
+ <div className="flex  gap-4">
+            {" "}
+            <img
+              src={about1}
+              className="md:w-[300px] h-[400px]  object-cover rounded"
+            />
+            <img
+              src={about2}
+              className="md:w-[300px]  md:h-[350px] mt-10 object-cover rounded"
+            />
+          </div>
+
+          <div>
+           
+          </div>
+          <div className="flex  gap-4">
+            {" "}
+            <img
+              src={about1}
+              className="md:w-[300px]  md:h-[350px] mt-10 object-cover rounded"
+            />
+            <img
+              src={about2}
+              className="md:w-[300px] h-[400px]  object-cover rounded"
+            />
+          </div><img
+                src={about3}
+                className="md:w-[300px] md:h-[350px] object-cover relative z-10  rounded"
+              />
+              <img
+                src={lightimg}
+                className="w-[200px]  left-0 -mt-10 bouncepic relative"
+              />
+            </div>
+            <div>
+              <img
+                src={about4}
+                className="md:w-[300px] md:h-[350px] md:my-10 object-cover rounded"
+              /> 
+              
+               <img
+              src={popfly}
+              className="absolute w-16 md:left-[25%] left-[70%] md:top-[100%] top-[93%] animate-move-left-right"
+            /> */

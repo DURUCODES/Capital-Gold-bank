@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 
 const LanguageSelector = () => {
   const googleTranslateScriptLoaded = useRef(false);
-  const translateElementInitialized = useRef(false);
 
   useEffect(() => {
     if (!googleTranslateScriptLoaded.current) {
@@ -14,26 +13,18 @@ const LanguageSelector = () => {
       googleTranslateScriptLoaded.current = true;
 
       window.googleTranslateElementInit = () => {
-        if (!translateElementInitialized.current) {
-          new window.google.translate.TranslateElement(
-            {
-              pageLanguage: "en",
-              includedLanguages:
-                "ig,es,fr,de,it,pt,zh-CN,ja,ko,ar,ru,hi,pl,nl,sv,da,no,fi,el,tr",
-            },
-            "google_translate_element"
-          );
-          translateElementInitialized.current = true;
-        }
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages:
+              "ig,es,fr,de,it,pt,zh-CN,ja,ko,ar,ru,hi,pl,nl,sv,da,no,fi,el,tr",
+          },
+          "google_translate_element"
+        );
       };
     }
   }, []);
 
-  return (
-    <div className="language-selector-container">
-      <div id="google_translate_element" className="language-selector"></div>
-    </div>
-  );
+  return <div id="google_translate_element"></div>;
 };
-
 export default LanguageSelector;
