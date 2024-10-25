@@ -3,7 +3,7 @@ import Goldhand from "../public/image/goldhand.jpg";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, useLocation } from "react-router-dom";
-import LanguageSelector from "../language/LanguageSelector";
+
 
 export const navlinks = [
   { id: 1, label: "Home", url: "/" },
@@ -129,7 +129,7 @@ const DesktopNav = ({ openNav }) => {
           </li>
         </ul>
       </div>
-      <LanguageSelector />
+
       <div className="flex items-center">
         {/* Buttons */}
         <div className="relative">
