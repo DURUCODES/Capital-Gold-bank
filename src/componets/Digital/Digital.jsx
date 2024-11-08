@@ -5,10 +5,16 @@ import { IoRocket } from "react-icons/io5";
 import { CiAlarmOn } from "react-icons/ci";
 import { FaAppStore } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 const Digital = () => {
   return (
     <div className="md:p-20 p-4 flex flex-col md:flex-row justify-between items-center ">
-      <div className=" md:px-10 px-4 relative flex">
+      <motion.div
+        initial={{ x: "-120vw" }}
+        animate={{ x: 0 }}
+        transition={{ duration: 5, delay: 3 }}
+        className=" md:px-10 px-4 relative flex"
+      >
         {/*  */}
         <div className="w-full">
           <img
@@ -27,7 +33,7 @@ const Digital = () => {
             className="clip-image border-4 border-white w-full h-full object-cover"
           />
         </div>
-      </div>
+      </motion.div>
       <div className="md:ml-16">
         {/* right sidelightimg */}
         <div className="my-5">

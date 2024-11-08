@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoMdClose } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const MobileNav = ({ closeNav, isOpen }) => {
   const [activeLink, setActiveLink] = useState("Home");
@@ -27,7 +28,11 @@ const MobileNav = ({ closeNav, isOpen }) => {
                 : "transform -translate-x-full"
             }`}
           >
-            <div className="flex flex-col h-full fixed bg-white shadow-xl w-[300px] px-20 py-0 text-center left-[25%] top-0 z-10 transition-all duration-700">
+            <motion.div
+              animate={{ x: 0 }}
+              transition={{ duration: 5 }}
+              className="flex flex-col h-full fixed bg-white shadow-xl w-[300px] px-20   py-0 text-center left-[50%] top-0 z-10 transition-all duration-700"
+            >
               <div className="flex text-2xl absolute top-2 right-10 cursor-pointer px-4 py-3 bg-[#db2777] rounded-t-2xl rounded-l-xl text-white">
                 <IoMdClose onClick={closeNav} />
               </div>
@@ -132,7 +137,7 @@ const MobileNav = ({ closeNav, isOpen }) => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       )}

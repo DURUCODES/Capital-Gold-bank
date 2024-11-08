@@ -14,49 +14,52 @@ const Blog = () => {
         Team
       </h1>
       <div className="mt-10  flex flex-wrap justify-center">
-        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200">
-          <img src={image1} className="w-[300px] h-[300px]" />
-          <div className="p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex  items-center">
-                <span className="text-blue-700 mx-1">
-                  <IoCalendarOutline />
-                </span>
-                <span className="text-blue-700 text-[14px]">2024-24-10</span>
+        {/* CARD 1 */}
+        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200 ">
+          <div className="view">
+            <img src={image1} className="w-[300px] h-[300px]" />
+            <div className="p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex  items-center">
+                  <span className="text-blue-700 mx-1">
+                    <IoCalendarOutline />
+                  </span>
+                  <span className="text-blue-700 text-[14px]">2024-24-10</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-blue-700 mx-1">
+                    <IoCreateOutline />
+                  </span>
+                  <span className="text-blue-700 text-[14px] max-w-[12ch] truncate">
+                    rocky living
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center">
-                <span className="text-blue-700 mx-1">
-                  <IoCreateOutline />
-                </span>
-                <span className="text-blue-700 text-[14px] max-w-[12ch] truncate">
-                  rocky living
-                </span>
+              <div>
+                <h2 className="font-semibold text-lg   my-3 hover:text-blue-500 hover:underline">
+                  <a
+                    href="https://www.investopedia.com/articles/younginvestors/08/eight-tips.asp"
+                    target="_blank"
+                  >
+                    {" "}
+                    8 Financial Tips for Young Adults{" "}
+                  </a>
+                </h2>
+                <p className="text-gray-600 max-w-[150ch] truncate">
+                  {/* DESCRIPTION */}
+                  Exercise patience and self-control with your finances. If you
+                  wait and save money for what you need, you will pay with cash
+                  or a debit card to deduct money directly from your checking
+                  account and avoid using a credit card.
+                </p>
               </div>
-            </div>
-            <div>
-              <h2 className="font-semibold text-lg   my-3 hover:text-blue-500 hover:underline">
-                <a
-                  href="https://www.investopedia.com/articles/younginvestors/08/eight-tips.asp"
-                  target="_blank"
-                >
-                  {" "}
-                  8 Financial Tips for Young Adults{" "}
-                </a>
-              </h2>
-              <p className="text-gray-600 max-w-[150ch] truncate">
-                {/* DESCRIPTION */}
-                Exercise patience and self-control with your finances. If you
-                wait and save money for what you need, you will pay with cash or
-                a debit card to deduct money directly from your checking account
-                and avoid using a credit card.
-              </p>
             </div>
           </div>
         </div>
 
         {/* CARD 2 */}
 
-        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200">
+        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200 ">
           <img src={image2} className="w-[300px] h-[300px]" />
           <div className="p-4">
             <div className="flex items-center justify-between">
@@ -101,7 +104,7 @@ const Blog = () => {
 
         {/* CARD 3 */}
 
-        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200">
+        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200 ">
           <img src={image3} className="w-[300px] h-[300px]" />
           <div className="p-4">
             <div className="flex items-center justify-between">
@@ -147,44 +150,46 @@ const Blog = () => {
 
         {/* CARD 4 */}
 
-        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200">
-          <img src={image4} className="w-[300px] h-[300px]" />
-          <div className="p-4">
-            <div className="flex items-center justify-between">
-              <div className="flex  items-center">
-                <span className="text-blue-700 mx-1">
-                  <IoCalendarOutline />
-                </span>
-                <span className="text-blue-700 text-[14px]">2024-14-10</span>
+        <div className="m-4 w-[300px]  bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-all duration-200 ">
+          <div className="view">
+            <img src={image4} className="w-[300px] h-[300px]" />
+            <div className="p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex  items-center">
+                  <span className="text-blue-700 mx-1">
+                    <IoCalendarOutline />
+                  </span>
+                  <span className="text-blue-700 text-[14px]">2024-14-10</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-blue-700 mx-1">
+                    <IoCreateOutline />
+                  </span>
+                  <span className="text-blue-700 text-[14px] max-w-[12ch] truncate">
+                    Olumide Adesina
+                  </span>
+                </div>
               </div>
-              <div className="flex items-center">
-                <span className="text-blue-700 mx-1">
-                  <IoCreateOutline />
-                </span>
-                <span className="text-blue-700 text-[14px] max-w-[12ch] truncate">
-                  Olumide Adesina
-                </span>
+              <div>
+                <h2 className="font-semibold text-lg   my-3 hover:text-blue-500 hover:underline">
+                  <a
+                    href="https://nairametrics.com/2024/10/24/naira-exposed-to-market-forces-loses-n1650-level-at-official-market/"
+                    target="_blank"
+                  >
+                    {" "}
+                    Naira exposed to market forces, loses N1,650/$ level at
+                    official market
+                  </a>
+                </h2>
+                <p className="text-gray-600 max-w-[150ch] truncate">
+                  The local currency has been left to the whims of market forces
+                  amid the strengthening of the U.S. dollar index. The Naira’s
+                  decline against the US dollar persisted in the official
+                  foreign currency market. At the official window, the local
+                  currency was at N1,654.09/$1 on Wednesday, based on data from
+                  the Nigerian Autonomous Foreign Exchange Market.
+                </p>
               </div>
-            </div>
-            <div>
-              <h2 className="font-semibold text-lg   my-3 hover:text-blue-500 hover:underline">
-                <a
-                  href="https://nairametrics.com/2024/10/24/naira-exposed-to-market-forces-loses-n1650-level-at-official-market/"
-                  target="_blank"
-                >
-                  {" "}
-                  Naira exposed to market forces, loses N1,650/$ level at
-                  official market
-                </a>
-              </h2>
-              <p className="text-gray-600 max-w-[150ch] truncate">
-                The local currency has been left to the whims of market forces
-                amid the strengthening of the U.S. dollar index. The Naira’s
-                decline against the US dollar persisted in the official foreign
-                currency market. At the official window, the local currency was
-                at N1,654.09/$1 on Wednesday, based on data from the Nigerian
-                Autonomous Foreign Exchange Market.
-              </p>
             </div>
           </div>
         </div>

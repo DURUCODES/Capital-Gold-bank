@@ -19,7 +19,7 @@ const Benefit = () => {
       </h1>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-3  my-4 gap-6">
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
             <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <GiWorld className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
@@ -30,7 +30,7 @@ const Benefit = () => {
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
           </div>
 
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
             <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <BiTransferAlt className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
@@ -41,7 +41,7 @@ const Benefit = () => {
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
           </div>
 
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
             <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <MdOutlineNotificationsActive className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
@@ -52,7 +52,7 @@ const Benefit = () => {
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
           </div>
 
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
             <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <PiHourglassLow className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
@@ -63,7 +63,7 @@ const Benefit = () => {
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
           </div>
 
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
             <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <IoIosFlash className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
@@ -74,7 +74,7 @@ const Benefit = () => {
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
           </div>
 
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
             <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <MdSecurity className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />

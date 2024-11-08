@@ -10,6 +10,7 @@ import user3 from "../public/image/person3.avif";
 import dollar from "./image/dollar.jpg";
 import dollarrolling from "./image/cc.gif";
 import coin1 from "./image/coinroll.gif";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +25,10 @@ const Hero = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-between overflow-hidden bg-white px-3 md:p-10">
-      <div
+      <motion.div
+        initial={{ x: "-120vw" }}
+        animate={{ x: 0 }}
+        transition={{ duration: 5, delay: 1 }}
         className=" md:w-[50%]"
         style={{
           backgroundImage: `url(${coin1})`,
@@ -106,8 +110,11 @@ const Hero = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div
+      </motion.div>
+      <motion.div
+        initial={{ x: "120vw" }}
+        animate={{ x: 0 }}
+        transition={{ duration: 5, delay: 1 }}
         className="flex space-x-4 items-center justify-center relative bg-cover bg-center"
         style={{
           backgroundImage: `url(${dollar})`,
@@ -133,7 +140,7 @@ const Hero = () => {
         <div className="relative overflow-hidden w-[200px]  h-[350px] md:h-[550px] md:w-[300px] clip-left top-20">
           <img src={smile} className="h-full w-auto object-cover" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
