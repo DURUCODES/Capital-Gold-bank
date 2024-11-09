@@ -16,12 +16,22 @@ import { PiHandWithdrawLight } from "react-icons/pi";
 import phoneimage from "../public/image/image (5).avif";
 import appstore from "../public/image/ii.avif";
 import googlestrore from "../public/image/aa.avif";
+import { motion } from "framer-motion";
 
 import { Link } from "react-router-dom";
 
 const CreditCard = () => {
   return (
-    <div className="">
+    <motion.div
+      initial={{ opacity: 0 }} // Start with opacity 0
+      animate={{ opacity: 1 }} // Fade in to opacity 1
+      transition={{
+        duration: 3, // Duration of the fade-in
+        delay: 0.5, // Add delay before starting the fade-in
+        ease: "easeOut", // Smooth easing effect
+      }}
+      className=""
+    >
       <div
         style={{
           backgroundImage: `linear-gradient(to right, rgba(219, 39, 119, 0.8), rgba(0, 0, 0, 0.8)), url(${business})`,
@@ -112,15 +122,17 @@ const CreditCard = () => {
               Welcome to Rivero Trust Bank, Apply For Credit Cards to be
               delivered to your doorstep today.
             </p>
-            <button class="overflow-hidden  w-36 p-2 h-12 bg-black text-white border-none rounded-md text-xs font-bold cursor-pointer relative z-10 group">
-              APPLY
-              <span class="absolute w-40 h-32 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-              <span class="absolute w-40 h-32 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-              <span class="absolute w-40 h-32 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-              <span class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute  left-10 z-10">
-                APPLYING
-              </span>
-            </button>
+            <Link to="/login">
+              <button class="overflow-hidden  w-36 p-2 h-12 bg-black text-white border-none rounded-md text-xs font-bold cursor-pointer relative z-10 group">
+                APPLY
+                <span class="absolute w-40 h-32 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+                <span class="absolute w-40 h-32 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+                <span class="absolute w-40 h-32 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+                <span class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute  left-10 z-10">
+                  APPLYING
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
         <hr className="my-5 border-1  w-full border-black" />
@@ -226,7 +238,7 @@ const CreditCard = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

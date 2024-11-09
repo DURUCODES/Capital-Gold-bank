@@ -3,6 +3,8 @@ import Goldhand from "../public/image/goldhand.jpg";
 import { IoPersonAddOutline } from "react-icons/io5";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, useLocation } from "react-router-dom";
+import SelectCountry from "../SelectCountry/SelectCountry";
+import { motion } from "framer-motion";
 
 export const navlinks = [
   { id: 1, label: "Home", url: "/" },
@@ -23,7 +25,17 @@ const DesktopNav = ({ openNav }) => {
 
   return (
     <div className="md:px-4 px-1 flex justify-between items-center py-2 shadow bg-white mb-10">
-      <div className="flex items-center">
+      <motion.div
+        className="flex items-center"
+        initial={{ opacity: 0, y: -50 }} // Start position (opacity 0 and above)
+        animate={{ opacity: 1, y: 0 }} // Final position (opacity 1 and at original position)
+        transition={{
+          duration: 3, // Duration of 3 seconds
+          type: "spring", // Use spring animation for bouncing effect
+          stiffness: 100, // Adjust stiffness to control the bounce
+          damping: 15, // Damping to control the bounce smoothness
+        }}
+      >
         {/* Logo */}
         <div>
           <Link to="/">
@@ -44,7 +56,7 @@ const DesktopNav = ({ openNav }) => {
             </p>
           </Link>
         </div>
-      </div>
+      </motion.div>
       <div className="items-center hidden md:flex">
         {/* Links */}
         <ul className="space-x-4 uppercase text-[12px] flex  font-semibold">
@@ -132,10 +144,14 @@ const DesktopNav = ({ openNav }) => {
       <div className="flex items-center">
         {/* Buttons */}
         <div className="relative">
-          <IoPersonAddOutline
-            className="md:mr-4 text-[22px] cursor-pointer"
-            onClick={toggleDropdown}
-          />
+          <div className="flex  items-center">
+            {" "}
+            <SelectCountry className="" />
+            <IoPersonAddOutline
+              className="md:mr-4 ml-2 text-[28px] cursor-pointer"
+              onClick={toggleDropdown}
+            />
+          </div>
           {isDrop && (
             <div className="absolute bg-white shadow-xl top-10 rounded ">
               <ul className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 space-y-2 p-2 shadow">
@@ -151,15 +167,17 @@ const DesktopNav = ({ openNav }) => {
         </div>
 
         <div className="hidden md:block">
-          <button className="overflow-hidden w-36 p-2 h-12 bg-black text-white border-none rounded-md text-xs font-bold cursor-pointer relative z-10 group">
-            Online Banking
-            <span className="absolute w-40 h-28 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
-            <span className="absolute w-40 h-28 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
-            <span className="absolute w-40 h-28 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-            <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute left-6 z-10">
+          <Link to="/login">
+            <button className="overflow-hidden w-36 p-2 h-12 bg-black text-white border-none rounded-md text-xs font-bold cursor-pointer relative z-10 group">
               Online Banking
-            </span>
-          </button>
+              <span className="absolute w-40 h-28 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
+              <span className="absolute w-40 h-28 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
+              <span className="absolute w-40 h-28 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
+              <span className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute left-6 z-10">
+                Online Banking
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
       <div

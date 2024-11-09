@@ -11,9 +11,20 @@ import { PiHandWithdrawLight } from "react-icons/pi";
 import phoneimage from "../public/image/image (5).avif";
 import appstore from "../public/image/ii.avif";
 import googlestrore from "../public/image/aa.avif";
+import { motion } from "framer-motion"; // Importing Framer Motion
+
 const BusinessPage = () => {
   return (
-    <div className="">
+    <motion.div
+      initial={{ opacity: 0 }} // Start with opacity 0
+      animate={{ opacity: 1 }} // Fade in to opacity 1
+      transition={{
+        duration: 3, // Duration of the fade-in
+        delay: 0.5, // Add delay before starting the fade-in
+        ease: "easeOut", // Smooth easing effect
+      }}
+      className=""
+    >
       <div
         style={{
           backgroundImage: `linear-gradient(to right, rgba(219, 39, 119, 0.8), rgba(0, 0, 0, 0.8)), url(${business})`,
@@ -33,7 +44,7 @@ const BusinessPage = () => {
           <li className="text-white font-semibold hover:text-[#db2777] transition-all duration-300">
             <Link to="/">Home</Link>
           </li>
-          <li className="text-[#db2777] font-semibold list-disc   cursor-pointer">
+          <li className="text-[#db2777] font-semibold list-disc cursor-pointer">
             {" "}
             Business Banking
           </li>
@@ -48,7 +59,12 @@ const BusinessPage = () => {
           take certain tasks.
         </h2>
       </div>
-      <div className="py-4 px-6">
+      <motion.div
+        className="py-4 px-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 1 }} // Fade in with delay
+      >
         <h1 className="text-[25px] font-bold mb-2">Our Business Banking</h1>
         <p className="text-[14px]">
           A variety of services given by a bank to a business or corporation is
@@ -56,36 +72,40 @@ const BusinessPage = () => {
           loans, credit, savings accounts, and checking accounts, all of which
           are tailored to the needs of the company.
         </p>
-      </div>
-      <div className="flex  flex-col px-6">
-        <div className="flex   mb-4 ">
+      </motion.div>
+
+      <motion.div
+        className="flex flex-col px-6"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, delay: 1.5 }} // Fade and slide in with delay
+      >
+        <div className="flex mb-4 ">
           <div>
-            <MdOutlineLibraryAddCheck className="text-[20px]  md:text-[22px] mr-2 text-[#db2777]" />
-          </div>
-          <p className="text-[14px]">
-            A mix of current and savings accounts to cover your banking needs.
-          </p>
-        </div>
-        <div className="flex   mb-4 ">
-          <div>
-            {" "}
-            <MdOutlineLibraryAddCheck className="text-[20px]  md:text-[22px] mr-2 text-[#db2777]" />
-          </div>
-          <p className="text-[14px] font-">
-            Accounts that complement each other, combining to suit the needs of
-            each individual’s cash portfolio.
-          </p>
-        </div>
-        <div className="flex   mb-4 ">
-          <div>
-            {" "}
             <MdOutlineLibraryAddCheck className="text-[20px] md:text-[22px] mr-2 text-[#db2777]" />
           </div>
           <p className="text-[14px]">
             A mix of current and savings accounts to cover your banking needs.
           </p>
         </div>
-        <div className="flex   mb-4 ">
+        <div className="flex mb-4 ">
+          <div>
+            <MdOutlineLibraryAddCheck className="text-[20px] md:text-[22px] mr-2 text-[#db2777]" />
+          </div>
+          <p className="text-[14px]">
+            Accounts that complement each other, combining to suit the needs of
+            each individual’s cash portfolio.
+          </p>
+        </div>
+        <div className="flex mb-4 ">
+          <div>
+            <MdOutlineLibraryAddCheck className="text-[20px] md:text-[22px] mr-2 text-[#db2777]" />
+          </div>
+          <p className="text-[14px]">
+            A mix of current and savings accounts to cover your banking needs.
+          </p>
+        </div>
+        <div className="flex mb-4 ">
           <div>
             <MdOutlineLibraryAddCheck className="text-[20px] md:text-[22px] mr-2 text-[#db2777]" />
           </div>
@@ -94,9 +114,9 @@ const BusinessPage = () => {
             apart from the Cash Hub Account which can have two.
           </p>
         </div>
-        <div className="flex  mb-4 ">
+        <div className="flex mb-4 ">
           <div>
-            <MdOutlineLibraryAddCheck className="text-[20px]  md:text-[22px] mr-2 text-[#db2777]" />
+            <MdOutlineLibraryAddCheck className="text-[20px] md:text-[22px] mr-2 text-[#db2777]" />
           </div>
           <p className="text-[14px]">
             A range of benefits including instant access to funds, free
@@ -104,108 +124,153 @@ const BusinessPage = () => {
             account pages for individual details.
           </p>
         </div>
-      </div>
-      <div className=" px-6 my-5">
-        <hr className="border-t border-gray-500 my-2" />
+      </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3  my-4 gap-6">
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
+      <motion.div
+        className="px-6 my-5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 2 }} // Fade in with delay
+      >
+        <hr className="border-t border-gray-500 my-2" />
+        <div className="grid grid-cols-1 md:grid-cols-3 my-4 gap-6">
+          {/* Each of the following sections could have an animation as well */}
+          <motion.div
+            className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 2.5 }}
+          >
+            <div className="absolute inset-0 bg-[#db2777] transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <SiGnuprivacyguard className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
+              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4 font-bold">
                 Security Assured
               </p>
             </div>
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
+          </motion.div>
 
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          <motion.div
+            className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 3 }}
+          >
             <div className="absolute inset-0 bg-[#db2777] transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <FaBusinessTime className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
-                Business Realiable
+              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4 font-bold">
+                Business Reliable
               </p>
             </div>
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          </motion.div>
+
+          <motion.div
+            className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 3 }}
+          >
             <div className="absolute inset-0 bg-[#db2777] transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
-              <GiRapidshareArrow className="text-[50px] md:text-[55px] text-[#db2777]  mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
+              <GiRapidshareArrow className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
+              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4 font-bold">
                 Rapid Response
               </p>
             </div>
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          </motion.div>
+
+          <motion.div
+            className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 3 }}
+          >
             <div className="absolute inset-0 bg-[#db2777] transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <GiSuspensionBridge className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
+              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4 font-bold">
                 Pension
               </p>
             </div>
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
+          </motion.div>
+
+          <motion.div
+            className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 3 }}
+          >
+            <div className="absolute inset-0 bg-[#db2777] transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
-              <MdEnergySavingsLeaf className="text-[50px] md:text-[55px] text-[#db2777]  mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
+              <MdEnergySavingsLeaf className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
+              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4 font-bold">
                 Savings
               </p>
             </div>
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group">
+          </motion.div>
+
+          <motion.div
+            className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 3 }}
+          >
             <div className="absolute inset-0 bg-[#db2777] transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
             <div className="flex items-center">
               <PiHandWithdrawLight className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
+              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4 font-bold">
                 Withdraw
               </p>
             </div>
             <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
+          </motion.div>
+
+          {/* Repeat the rest of the sections similarly */}
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="flex flex-col justify-center md:flex-row md:p-20 md:justify-between my-10 items-center"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 3, delay: 3 }}
+      >
+        <div className="flex justify-center my-5">
+          <img src={phoneimage} className="w-[80%] h-auto" />
+        </div>
+        <div className="flex flex-col">
+          <h3 className="text-[#db2777] text-[20px]"> Our App</h3>
+          <h1 className="leading-9 mb-4 md:text-[40px] font-semibold">
+            Let's Answer Some Of Your Questions Or Download Our App{" "}
+          </h1>
+          <p>
+            Our digital banking platform is up to date and completely
+            trustworthy. You can use your mobile to perform transactions, loan
+            requests, and credit card transactions.
+          </p>
+          <h3 className="text-2xl font-semibold my-4">
+            Over 9.2 million Downloads Worldwide
+          </h3>
+
+          <div className="flex items-center mx-auto md:my-5 md:mx-0 space-x-3">
+            <img
+              src={appstore}
+              className="md:w-[200px] w-[100px] shadow-2xl rounded"
+            />
+            <img
+              src={googlestrore}
+              className="md:w-[200px] w-[100px] shadow-2xl rounded"
+            />
           </div>
         </div>
-        {/*  draft display  */}
-        <div className="flex  flex-col justify-center  md:flex-row  md:p-20 md:justify-between my-10  items-center ">
-          <div className="flex justify-center my-5">
-            <img src={phoneimage} className="w-[80%] h-auto" />
-          </div>
-          {/*    <div className="bg-yellow-400 w-[100px] h-[100px] rounded-full -mt-[70px] mr-[250px] animate-slow-bounce"></div> */}
-
-          <div className="flex  flex-col">
-            <h3 className="text-[#db2777] text-[20px] "> Our App</h3>
-            <h1 className=" leading-9 mb-4 md:text-[40px] font-semibold ">
-              Let's Answer Some Of Your Questions Or Download Our App{" "}
-            </h1>
-            <p>
-              Our digital banking platform is up to date and completely
-              trustworthy. You can use your mobile to perform transactions, loan
-              requests, and credit card transactions.
-            </p>
-            <h3 className="text-2xl font-semibold my-4">
-              Over 9.2 million Downloads Worldwide
-            </h3>
-
-            <div className="flex  items-center mx-auto md:my-5 md:mx-0 space-x-3">
-              <img
-                src={appstore}
-                className="md:w-[200px] w-[100px]  shadow-2xl rounded"
-              />
-              <img
-                src={googlestrore}
-                className="md:w-[200px] w-[100px] shadow-2xl rounded"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

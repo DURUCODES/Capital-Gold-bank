@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-
+import { motion } from "framer-motion";
 const counterNumber = [
   { id: 1, label: "2M+", title: "Download" },
   { id: 2, label: "18K+", title: "Feedback" },
@@ -50,14 +50,24 @@ const Counter = () => {
   return (
     <div ref={counterRef} className="flex  flex-col md:flex-row my-6 space-x-4">
       {counters.map((counter) => (
-        <div key={counter.id} className="text-center md:my-10 my-3">
+        <motion.div
+          initial={{ opacity: 0, x: -100 }} // Start from the right
+          whileInView={{ opacity: 1, x: 0 }} // Move to normal position
+          transition={{
+            duration: 1,
+            ease: "easeInOut", // Smooth transition
+          }}
+          viewport={{ once: true }}
+          key={counter.id}
+          className="text-center md:my-10 my-3"
+        >
           <div className="md:border-r-2 border-r-0   md:px-10 last:border-r-0">
             <h2 className=" text-[20px] md:text-[40px] font-bold ">
               {counter.label}
             </h2>
           </div>
           <p className="text-lg">{counter.title}</p>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

@@ -5,9 +5,18 @@ import { CiLocationOn } from "react-icons/ci";
 import { TfiEmail } from "react-icons/tfi";
 import { LuPhone } from "react-icons/lu";
 import serviceimg from "../public/image/24:7img.avif";
+import { motion } from "framer-motion";
 const ContatcUs = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }} // Start with opacity 0
+      animate={{ opacity: 1 }} // Fade in to opacity 1
+      transition={{
+        duration: 3, // Duration of the fade-in
+        delay: 0.5, // Add delay before starting the fade-in
+        ease: "easeOut", // Smooth easing effect
+      }}
+    >
       <div
         style={{
           backgroundImage: `linear-gradient(to right, rgba(219, 39, 119, 0.8), rgba(0, 0, 0, 0.8)), url(${business})`,
@@ -170,7 +179,7 @@ const ContatcUs = () => {
           <img src={serviceimg} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

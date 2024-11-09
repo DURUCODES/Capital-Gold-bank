@@ -34,10 +34,48 @@ import clapimg from "../public/image/clap.avif";
 import roundpop from "../public/image/roundpop.avif";
 import Counter from "../counter/Counter";
 import Carousel from "../carousel/Carousel";
+import { motion } from "framer-motion";
+
+// Motion variants
+const containerVariants = {
+  hidden: { opacity: 0, x: -100 }, // Initially offscreen to the left
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "spring", stiffness: 60, delay: 0.3 },
+  }, // When in view, slide in from left
+};
+
+const rightContainerVariants = {
+  hidden: { opacity: 0, x: 100 }, // Initially offscreen to the right
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "spring", stiffness: 60, delay: 0.5 },
+  }, // When in view, slide in from right
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 30 }, // Start below the normal position
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 60, delay: 0.7 },
+  }, // Slide up with delay
+};
 
 const About = () => {
   return (
-    <div className=" overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0 }} // Start with opacity 0
+      animate={{ opacity: 1 }} // Fade in to opacity 1
+      transition={{
+        duration: 3, // Duration of the fade-in
+        delay: 0.5, // Add delay before starting the fade-in
+        ease: "easeOut", // Smooth easing effect
+      }}
+      className=" overflow-hidden"
+    >
       <div
         style={{
           backgroundImage: `linear-gradient(to right, rgba(219, 39, 119, 0.8), rgba(0, 0, 0, 0.8)), url(${business})`,
@@ -76,8 +114,17 @@ const About = () => {
       </div>
 
       {/* about details below */}
-      <div className="flex  w-full md:flex-row flex-col items-center px-4 md:px-10 ">
-        <div className="grid grid-cols-2  gap-4">
+      <div className="flex w-full md:flex-row flex-col items-center px-4 md:px-10">
+        <motion.div
+          className="grid grid-cols-2 gap-4"
+          initial={{ opacity: 0, x: -100 }} // Start from the left
+          whileInView={{ opacity: 1, x: 0 }} // Move to normal position
+          transition={{
+            duration: 1,
+            ease: "easeInOut", // Smooth transition
+          }}
+          viewport={{ once: true }}
+        >
           {/* Row 1 */}
           <div>
             <img
@@ -88,11 +135,11 @@ const About = () => {
           <div>
             <img
               src={popfly}
-              className="absolute w-16 md:left-[25%] left-[70%]  animate-move-left-right"
+              className="absolute w-16 md:left-[25%] left-[70%] animate-move-left-right"
             />
             <img
               src={about2}
-              className="md:w-[500px] md:h-[350px] mt-[48px] h-[250px]  object-cover rounded"
+              className="md:w-[500px] md:h-[350px] mt-[48px] h-[250px] object-cover rounded"
             />
           </div>
           <div>
@@ -102,93 +149,128 @@ const About = () => {
             />
             <img
               src={lightimg}
-              className="w-[200px]  left-0 -mt-10 bouncepic relative"
+              className="w-[200px] left-0 -mt-10 bouncepic relative"
             />
           </div>
           <div>
             <img
               src={about4}
-              className="md:w-[500px] md:h-[400px] h-[250px]  object-cover rounded"
+              className="md:w-[500px] md:h-[400px] h-[250px] object-cover rounded"
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="md:ml-4">
-          {/* right sidelightimg */}
+        <motion.div
+          className="md:ml-4"
+          initial={{ opacity: 0, x: 100 }} // Start from the right
+          whileInView={{ opacity: 1, x: 0 }} // Move to normal position
+          transition={{
+            duration: 1,
+            ease: "easeInOut", // Smooth transition
+          }}
+          viewport={{ once: true }} // Trigger animation only once when 30% of the element is in view
+        >
+          {/* right side text content */}
           <div className="my-5">
-            {" "}
-            <h3 className="text-[#db2777] text-[25px] ">ABOUT US</h3>
-            <h1 className="md:text-[50px] text-[30px] font-bold my-4">
+            <motion.h3
+              className="text-[#db2777] text-[25px]"
+              variants={textVariants}
+            >
+              ABOUT US
+            </motion.h3>
+            <motion.h1
+              className="md:text-[50px] text-[30px] font-bold my-4"
+              variants={textVariants}
+            >
               Digital Banking was revolutionized by us.
-            </h1>
-            <p className="text-[16px]">
+            </motion.h1>
+            <motion.p className="text-[16px]" variants={textVariants}>
               We've developed to become one of the most well-known digital
               banking companies, dedicated to reinventing, simplifying, and
               humanizing the banking experience.
-            </p>
+            </motion.p>
           </div>
+
           <div>
             <div className="flex my-8">
-              <div className="relative bg-blue-100 md:w-24 md:h-14 w-[150px]  h-[50px] flex  items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
+              <div className="relative bg-blue-100 md:w-24 md:h-14 w-[150px] h-[50px] flex items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                 <TbHandClick className="text-3xl text-[#db2777] group-hover:text-white transition-colors duration-500 relative z-10" />
               </div>
-
               <div className="ml-4">
-                <h2 className="md:text-[20px] font-bold">
+                <motion.h2
+                  className="md:text-[20px] font-bold"
+                  variants={textVariants}
+                >
                   Powerful Mobile & Online App
-                </h2>
-                <p className="font-light text-gray-600">
+                </motion.h2>
+                <motion.p
+                  className="font-light text-gray-600"
+                  variants={textVariants}
+                >
                   Our mobile app service is quick and easy to use, and you can
                   get it from your app store.
-                </p>
+                </motion.p>
               </div>
             </div>
 
             <div className="flex my-8">
-              <div className="relative bg-blue-100 md:w-24 md:h-14 w-[150px]  h-[50px] flex  items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
+              <div className="relative bg-blue-100 md:w-24 md:h-14 w-[150px] h-[50px] flex items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                 <CiAlarmOn className="text-3xl text-[#db2777] group-hover:text-white transition-colors duration-500 relative z-10" />
               </div>
-
               <div className="ml-4">
-                <h2 className="md:text-[20px] font-bold">
-                  Brings More Transperency & Speed
-                </h2>
-                <p className="font-light text-gray-600">
+                <motion.h2
+                  className="md:text-[20px] font-bold"
+                  variants={textVariants}
+                >
+                  Brings More Transparency & Speed
+                </motion.h2>
+                <motion.p
+                  className="font-light text-gray-600"
+                  variants={textVariants}
+                >
                   Our digital banking services are transparent and quick, and
                   we're building a reliable network.
-                </p>
+                </motion.p>
               </div>
             </div>
 
             <div className="flex my-8">
-              <div className="relative bg-blue-100 w-[200px] md:w-[140px] md:h-14  h-[50px] flex  items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
+              <div className="relative bg-blue-100 w-[200px] md:w-[140px] md:h-14 h-[50px] flex items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                 <SiBetterstack className="text-3xl text-[#db2777] group-hover:text-white transition-colors duration-500 relative z-10" />
               </div>
-
               <div className="ml-4">
-                <h2 className="md:text-[20px] font-bold">
+                <motion.h2
+                  className="md:text-[20px] font-bold"
+                  variants={textVariants}
+                >
                   Special For Multiple User Capabilities
-                </h2>
-                <p className="font-light text-gray-600">
+                </motion.h2>
+                <motion.p
+                  className="font-light text-gray-600"
+                  variants={textVariants}
+                >
                   The ability of a computer or operating system to create
                   independent working environments for several users is referred
                   to as multiuser.
-                </p>
+                </motion.p>
               </div>
             </div>
           </div>
+
           <div className="my-10">
-            <button className="uppercase bg-[#db2777] hover:bg-[#46172c] text-white px-5 py-2 rounded flex items-center">
-              Start With US
-              <span className="ml-2">
-                <FaAngleRight />
-              </span>
-            </button>
+            <Link to="/login">
+              <button className="uppercase bg-[#db2777] hover:bg-[#46172c] text-white px-5 py-2 rounded flex items-center">
+                Start With Us
+                <span className="ml-2">
+                  <FaAngleRight />
+                </span>
+              </button>
+            </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* ////////// */}
@@ -202,7 +284,7 @@ const About = () => {
       <div className="px-5 md:p-10  flex flex-col md:flex-row justify-between items-center">
         <div className="">
           <h2 className="text-[#db2777] tracking-2px"> WHY CHOOSE US </h2>
-          <h1 className="text-[40px] my-2 font-bold">
+          <h1 className="md:text-[40px] text-[20px] my-2 font-bold">
             We are innovative and digital
           </h1>
           <p className="text-gray-400 text-[14px]">
@@ -212,7 +294,15 @@ const About = () => {
             simplifying, and humanizing banking.
           </p>
           {/* ///Done marks */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }} // Start from the right
+            whileInView={{ opacity: 1, x: 0 }} // Move to normal position
+            transition={{
+              duration: 1,
+              ease: "easeInOut", // Smooth transition
+            }}
+            viewport={{ once: true }}
+          >
             <div className="relative flex mr-4 items-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl my-4 overflow-hidden group">
               <span className="relative bg-white shadow md:p-5 p-3 rounded-full overflow-hidden transition-all duration-500 mr-2">
                 <span className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
@@ -242,10 +332,19 @@ const About = () => {
                 Currency Email Updates
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className=" relative w-[100%] md:px-5">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }} // Start from the right
+          whileInView={{ opacity: 1, x: 0 }} // Move to normal position
+          transition={{
+            duration: 1,
+            ease: "easeInOut", // Smooth transition
+          }}
+          viewport={{ once: true }}
+          className=" relative w-[100%] md:px-5"
+        >
           <div className="bg-[#f5d7d7] md:w-[680px] h-[450px] w-[300px] my-5 md:h-[550px] rounded-tl-[25%] rounded-br-[22%] animate-up-down"></div>
 
           <img
@@ -256,7 +355,7 @@ const About = () => {
             src={roundpop}
             className="w-[70px] absolute  right-5 md:right-10 md:top-58 top-[84%] animate-move"
           />
-        </div>
+        </motion.div>
       </div>
 
       {/*  fun fact below  and counting numbers  */}
@@ -307,56 +406,8 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default About;
-/* 
-
-
-
- <div className="flex  gap-4">
-            {" "}
-            <img
-              src={about1}
-              className="md:w-[300px] h-[400px]  object-cover rounded"
-            />
-            <img
-              src={about2}
-              className="md:w-[300px]  md:h-[350px] mt-10 object-cover rounded"
-            />
-          </div>
-
-          <div>
-           
-          </div>
-          <div className="flex  gap-4">
-            {" "}
-            <img
-              src={about1}
-              className="md:w-[300px]  md:h-[350px] mt-10 object-cover rounded"
-            />
-            <img
-              src={about2}
-              className="md:w-[300px] h-[400px]  object-cover rounded"
-            />
-          </div><img
-                src={about3}
-                className="md:w-[300px] md:h-[350px] object-cover relative z-10  rounded"
-              />
-              <img
-                src={lightimg}
-                className="w-[200px]  left-0 -mt-10 bouncepic relative"
-              />
-            </div>
-            <div>
-              <img
-                src={about4}
-                className="md:w-[300px] md:h-[350px] md:my-10 object-cover rounded"
-              /> 
-              
-               <img
-              src={popfly}
-              className="absolute w-16 md:left-[25%] left-[70%] md:top-[100%] top-[93%] animate-move-left-right"
-            /> */

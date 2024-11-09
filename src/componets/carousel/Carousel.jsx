@@ -4,6 +4,7 @@ import { FaHandHoldingUsd, FaAngleRight } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
 import { RiAlarmWarningFill } from "react-icons/ri";
 import { IoPersonAddSharp } from "react-icons/io5";
+import { motion } from "framer-motion";
 import { icons } from "lucide-react";
 
 const Carousel = () => {

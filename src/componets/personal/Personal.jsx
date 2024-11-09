@@ -11,9 +11,20 @@ import { PiHandWithdrawLight } from "react-icons/pi";
 import phoneimage from "../public/image/image (5).avif";
 import appstore from "../public/image/ii.avif";
 import googlestrore from "../public/image/aa.avif";
+import { motion } from "framer-motion";
+
 const Personal = () => {
   return (
-    <div className="">
+    <motion.div
+      initial={{ opacity: 0 }} // Start with opacity 0
+      animate={{ opacity: 1 }} // Fade in to opacity 1
+      transition={{
+        duration: 3, // Duration of the fade-in
+        delay: 0.5, // Add delay before starting the fade-in
+        ease: "easeOut", // Smooth easing effect
+      }}
+      className=""
+    >
       <div
         style={{
           backgroundImage: `linear-gradient(to right, rgba(219, 39, 119, 0.8), rgba(0, 0, 0, 0.8)), url(${business})`,
@@ -200,7 +211,7 @@ const Personal = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -8,6 +8,45 @@ import { MdOutlineNotificationsActive } from "react-icons/md";
 import { PiHourglassLow } from "react-icons/pi";
 import { TbHandClick } from "react-icons/tb";
 import { countryList } from "../currencyrate/Rate";
+import { motion } from "framer-motion";
+const cards = [
+  {
+    icon: (
+      <GiWorld className="text-[50px] md:text-[55px] text-[#db2777] mr-2" />
+    ),
+    title: "Global Coverage",
+  },
+  {
+    icon: (
+      <BiTransferAlt className="text-[50px] md:text-[55px] text-[#db2777] mr-2" />
+    ),
+    title: "Easy Transfer Method",
+  },
+  {
+    icon: (
+      <MdOutlineNotificationsActive className="text-[50px] md:text-[55px] text-[#db2777] mr-2" />
+    ),
+    title: "Global 24/7 Support",
+  },
+  {
+    icon: (
+      <PiHourglassLow className="text-[50px] md:text-[55px] text-[#db2777] mr-2" />
+    ),
+    title: "Lowest Fee",
+  },
+  {
+    icon: (
+      <IoIosFlash className="text-[50px] md:text-[55px] text-[#db2777] mr-2" />
+    ),
+    title: "Instant Processing",
+  },
+  {
+    icon: (
+      <MdSecurity className="text-[50px] md:text-[55px] text-[#db2777] mr-2" />
+    ),
+    title: "Bank Level Security",
+  },
+];
 const Benefit = () => {
   return (
     <div className="my-10 bg-gray-100 py-10 px-4">
@@ -18,73 +57,36 @@ const Benefit = () => {
         Your one-stop digital banking platform
       </h1>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-3  my-4 gap-6">
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
-            <div className="flex items-center">
-              <GiWorld className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
-                Global Coverage
-              </p>
-            </div>
-            <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
-            <div className="flex items-center">
-              <BiTransferAlt className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
-                Easy Transfer Method
-              </p>
-            </div>
-            <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
-            <div className="flex items-center">
-              <MdOutlineNotificationsActive className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
-                Global 24 / 7 Support
-              </p>
-            </div>
-            <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
-            <div className="flex items-center">
-              <PiHourglassLow className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
-                Lowest Fee
-              </p>
-            </div>
-            <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
-            <div className="flex items-center">
-              <IoIosFlash className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
-                Instant Processing
-              </p>
-            </div>
-            <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-
-          <div className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view">
-            <div className="absolute inset-0 bg-[#db2777]  transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
-            <div className="flex items-center">
-              <MdSecurity className="text-[50px] md:text-[55px] text-[#db2777] mr-2 relative z-10 transition-colors duration-200 group-hover:text-white " />
-              <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4  font-bold">
-                Bank Level Security
-              </p>
-            </div>
-            <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
-          </div>
-        </div>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 my-4 gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          {cards.map((card, index) => (
+            <motion.div
+              key={index}
+              className="relative py-10 bg-white transition-all duration-200 cursor-pointer rounded-xl shadow px-6 overflow-hidden group view"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                opacity: { duration: 0.5 },
+                y: { duration: 0.8, delay: index * 0.2 },
+              }}
+            >
+              <div className="absolute inset-0 bg-[#db2777] transform -translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
+              <div className="flex items-center">
+                <div className="relative z-10 transition-colors duration-200 group-hover:text-white">
+                  {card.icon}
+                </div>
+                <p className="relative z-10 transition-colors duration-200 group-hover:text-white ml-4 font-bold">
+                  {card.title}
+                </p>
+              </div>
+              <div className="rounded-full w-[40px] h-[40px] absolute top-12 left-10 bg-blue-200"></div>
+            </motion.div>
+          ))}
+        </motion.div>
 
         <div className="mt-10">
           <h3 className="text-center text-[#db2777] tracking-2px ">

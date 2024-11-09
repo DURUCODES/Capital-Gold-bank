@@ -20,7 +20,7 @@ const MobileNav = ({ closeNav, isOpen }) => {
   return (
     <>
       {isOpen && (
-        <div className="z-50 fixed backdrop-blur-md h-screen top-0 left-0 w-full  bg-opacity-70">
+        <div className="z-50 fixed backdrop-blur-md h-screen top-0 left-0 w-full bg-opacity-70">
           <div
             className={`bg-black bg-opacity-10 md:w-[400px] absolute left-0 top-0 h-full w-[250px] px-3 py-4 transition-transform duration-300 ease-in-out ${
               showMenu
@@ -31,13 +31,13 @@ const MobileNav = ({ closeNav, isOpen }) => {
             <motion.div
               animate={{ x: 0 }}
               transition={{ duration: 5 }}
-              className="flex flex-col h-full fixed bg-white shadow-xl w-[300px] px-20   py-0 text-center left-[50%] top-0 z-10 transition-all duration-700"
+              className="flex flex-col h-full items-center fixed bg-white shadow-xl w-[300px] px-20 py-0 text-center right-[-60%] top-0 z-10 transition-all duration-700"
             >
-              <div className="flex text-2xl absolute top-2 right-10 cursor-pointer px-4 py-3 bg-[#db2777] rounded-t-2xl rounded-l-xl text-white">
+              <div className="flex text-2xl absolute top-2 right-[80%] cursor-pointer px-4 py-3 bg-[#db2777] rounded-t-2xl rounded-l-xl text-white">
                 <IoMdClose onClick={closeNav} />
               </div>
 
-              <div className="flex flex-col items-center justify-center py-24">
+              <div className="flex flex-col items-center justify-center px-10 py-24">
                 <ul className="space-y-4 uppercase text-[12px]">
                   <li>
                     <Link
