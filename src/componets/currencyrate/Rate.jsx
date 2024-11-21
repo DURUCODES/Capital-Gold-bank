@@ -116,12 +116,12 @@ const Rate = () => {
                     </span>
                   </div>
                   <div>
-                    <button class="overflow-hidden  w-24 h-8 md:w-36 md:p-2 md:h-12 bg-black text-white border-none rounded-md text-xs font-bold cursor-pointer relative z-10 group">
+                    <button class="overflow-hidden  w-24 h-8 md:w-36 md:p-2 md:h-12 bg-black text-white border-none rounded-md text-xs font-bold cursor-pointer relative  group">
                       Buy
                       <span class="absolute w-40 h-28 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"></span>
                       <span class="absolute w-40 h-28 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"></span>
                       <span class="absolute w-40 h-28 -top-8 -left-2 bg-[#db2777] rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"></span>
-                      <span class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute  left-8 z-10">
+                      <span class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute  left-8 ">
                         Buy
                       </span>
                     </button>

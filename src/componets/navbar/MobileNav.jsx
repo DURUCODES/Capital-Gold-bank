@@ -31,9 +31,9 @@ const MobileNav = ({ closeNav, isOpen }) => {
             <motion.div
               animate={{ x: 0 }}
               transition={{ duration: 5 }}
-              className="flex flex-col h-full items-center fixed bg-white shadow-xl w-[300px] px-20 py-0 text-center right-[-60%] top-0 z-10 transition-all duration-700"
+              className="flex flex-col h-full items-center fixed bg-white shadow-xl w-[300px] px-20 py-0 text-center right-[-100%] top-0 z-10 transition-all duration-700"
             >
-              <div className="flex text-2xl absolute top-2 right-[80%] cursor-pointer px-4 py-3 bg-[#db2777] rounded-t-2xl rounded-l-xl text-white">
+              <div className="flex text-2xl absolute top-2 right-[20%] cursor-pointer px-3 py-3 bg-[#db2777] rounded-t-2xl rounded-l-xl text-white">
                 <IoMdClose onClick={closeNav} />
               </div>
 

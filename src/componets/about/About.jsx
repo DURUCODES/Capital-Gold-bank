@@ -237,7 +237,7 @@ const About = () => {
             </div>
 
             <div className="flex my-8">
-              <div className="relative bg-blue-100 w-[200px] md:w-[140px] md:h-14 h-[50px] flex items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
+              <div className="relative bg-blue-100 w-[200px] md:w-[140px] md:h-14 2xl:w-[100px] h-[50px] flex items-center justify-center rounded-t-2xl rounded-l-xl transition-all duration-200 cursor-pointer rounded-xl overflow-hidden group">
                 <div className="absolute inset-0 bg-[#db2777] transform translate-y-full transition-transform duration-500 group-hover:translate-y-0" />
                 <SiBetterstack className="text-3xl text-[#db2777] group-hover:text-white transition-colors duration-500 relative z-10" />
               </div>
@@ -345,7 +345,7 @@ const About = () => {
           viewport={{ once: true }}
           className=" relative w-[100%] md:px-5"
         >
-          <div className="bg-[#f5d7d7] md:w-[680px] h-[450px] w-[300px] my-5 md:h-[550px] rounded-tl-[25%] rounded-br-[22%] animate-up-down"></div>
+          <div className="bg-[#f5d7d7] md:w-[680px] h-[450px] w-[300px] my-5 md:h-[550px] 2xl:float-right rounded-tl-[25%] rounded-br-[22%] animate-up-down"></div>
 
           <img
             src={clapimg}
